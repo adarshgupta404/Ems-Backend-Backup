@@ -128,7 +128,7 @@ app.post("/create", upload.single("image"), function (req, res) {
         result.secure_url,
         req.body.salary,
       ];
-      console.log(values[4]);
+      // console.log(values[4]);
       con.query(query, [values], (err, result) => {
         if (err) return res.json({ Error: "Inside signup query" });
         else return res.json({ Status: "Success" });
